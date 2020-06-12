@@ -2,9 +2,4 @@ module github.com/tsuyo/k8s-app/back
 
 go 1.14
 
-require github.com/sirupsen/logrus v1.6.0
-
-require (
-	github.com/grpc/grpc v1.2.5
-	golang.org/x/crypto v0.0.0-20200219234226-1ad67e1f0ef4
-)
+require golang.org/x/crypto v0.0.0-20200604202706-70a84ac30bf9

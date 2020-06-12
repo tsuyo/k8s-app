@@ -6,7 +6,8 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	log "github.com/sirupsen/logrus"
+	// log "github.com/sirupsen/logrus"
+	"log"
 	"golang.org/x/crypto/sha3"
 )
 
