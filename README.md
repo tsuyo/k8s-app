@@ -13,3 +13,10 @@
 ### Integrations
 - Name: myGitHub, Integration Type: GitHub
 - Name: myArtifactory, Integration Type: Artifactory
+
+# Pipelines Config
+## Pipeline Sources
+Integration: myGitHub
+Repository Full Name: tsuyo/k8s-app
+Branch: master
+Pipeline Config File Filter: back/CI/jfrog/pipelines\..*\.yaml
