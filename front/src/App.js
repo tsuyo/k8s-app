@@ -23,17 +23,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-        <table>
-          <tbody>
-          <tr>
-            <td>{this.state.quote.quote}</td>
-            <td>{this.state.quote.author}</td>
-          </tr>
-          </tbody>
-        </table>
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        <div className="App-body">
+          <table>
+            <tbody>
+              <tr>
+                <td>{this.state.quote.quote}</td>
+                <td className="author">{this.state.quote.author}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>      
     );
   }

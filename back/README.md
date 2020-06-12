@@ -27,7 +27,7 @@ API_UID=""
 API_TOKENID=""
 
 ```
-Execute
+Execute on Mac
 ```
-docker run --env-file env.txt -p 8090:8090 -d backapp:1.0
+docker run --rm --name backend --network tsuyo_network --env-file env.txt -p 8090:8090 -d backapp:1.0
 ```
