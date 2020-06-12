@@ -23,7 +23,7 @@ pipelines:
             OFFLINE_MODE: "true"
             CGO_ENABLED: 0
           integrations:
-            - name: artifactory_eu
+            - name: myArtifactory
         execution:
           onStart:
             - echo "Run Unit Testing ..." 
@@ -46,7 +46,7 @@ pipelines:
           inputSteps:
             - name: build_go_backapp
           integrations:
-            - name: artifactory_eu
+            - name: myArtifactory
           outputResources:
             - name: build_info_backapp
         execution:
@@ -99,7 +99,7 @@ pipelines:
       #   type: Bash
       #   configuration:
       #     integrations:
-      #       - name: artifactory_eu
+      #       - name: myArtifactory
       #     inputResources:
       #       - name: build_info_backapp_promoted
       #     outputResources:
@@ -126,7 +126,7 @@ pipelines:
             - name: backapp_exec
             - name: build_info_backapp_promoted
           integrations:
-            - name: artifactory_eu
+            - name: myArtifactory
             - name: yann_github
         execution:
           onStart:
@@ -158,7 +158,7 @@ pipelines:
           inputSteps:
             - name: build_docker_backapp
           integrations:
-            - name: artifactory_eu
+            - name: myArtifactory
           outputResources:
             - name: build_info_docker_backapp
         execution:
@@ -197,7 +197,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: artifactory_eu
+            - name: myArtifactory
           inputResources:
             - name: build_info_docker_backapp_promoted
           outputResources:
@@ -220,7 +220,7 @@ pipelines:
           integrations:
             - name: ych_eks
             - name: ych_secret
-            - name: artifactory_eu
+            - name: myArtifactory
           inputResources:
             - name: app_helm_chart
         execution:

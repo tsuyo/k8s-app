@@ -10,7 +10,7 @@ resources:
         include: ^back\/.+
         exclude: ^back\/CI\/.+
 #        exclude: ^back\/CI\/Docker\/.+
-      gitProvider: yann_github
+      gitProvider: myGithub
       buildOn:
         commit: true
         tagCreate: true
@@ -25,7 +25,7 @@ resources:
         include: master
       files:
         include: ^back\/CI\/Docker\/.+
-      gitProvider: yann_github
+      gitProvider: myGithub
       buildOn:
         commit: false
         
@@ -42,21 +42,21 @@ resources:
   - name: build_info_backapp
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myAartifactory
       buildName: backapp-go
       buildNumber: ${run_number}
 
   - name: build_info_backapp_scanned
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       buildName: backapp-go
       buildNumber: ${run_number}
   
   - name: build_info_backapp_promoted
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       buildName: backapp-go
       buildNumber: ${run_number}
 
@@ -64,7 +64,7 @@ resources:
   - name: backapp_exec
     type: FileSpec
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       pattern: app-generic-rc-local/**/${appVersion}/backend
       buildName: ${triggerBuildInfoName}
       buildNumber: ${triggerBuildInfoNumber}
@@ -76,21 +76,21 @@ resources:
   - name: build_info_docker_backapp
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       buildName: backapp-docker
       buildNumber: ${run_number}
 
   - name: build_info_docker_backapp_scanned
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       buildName: backapp-docker
       buildNumber: ${run_number}
 
   - name: build_info_docker_backapp_promoted
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       buildName: backapp-docker
       buildNumber: ${run_number}
 
@@ -98,7 +98,7 @@ resources:
   - name: app_helm_chart
     type: HelmChart
     configuration:
-      sourceArtifactory: artifactory_eu
+      sourceArtifactory: myArtifactory
       repository: app-helm
       chart: my-app
       version: 0.0.1
