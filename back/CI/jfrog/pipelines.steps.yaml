@@ -15,7 +15,6 @@ pipelines:
         configuration:
           sourceLocation: back/
           repository: app-go
-          noRegistry: true
           outputLocation: /tmp/dist
           outputFile: backend
           inputResources:
