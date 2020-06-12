@@ -127,7 +127,7 @@ pipelines:
             - name: build_info_backapp_promoted
           integrations:
             - name: myArtifactory
-            - name: myGithub
+            - name: myGitHub
         execution:
           onStart:
             - echo ${res_backapp_exec_resourcePath}
