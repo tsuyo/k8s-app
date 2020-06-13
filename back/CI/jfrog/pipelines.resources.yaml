@@ -44,30 +44,30 @@ resources:
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-go
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
 
   - name: build_info_backapp_scanned
     type: BuildInfo
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-go
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
   
   - name: build_info_backapp_promoted
     type: BuildInfo
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-go
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
 
 # DOCKER PIPELINE 
   - name: backapp_exec
     type: FileSpec
     configuration:
       sourceArtifactory: myArtifactory
-      pattern: app-generic-rc-local/**/${appVersion}/backend
-      buildName: ${triggerBuildInfoName}
-      buildNumber: ${triggerBuildInfoNumber}
+      pattern: 'app-generic-rc-local/**/${appVersion}/backend'
+      buildName: '${triggerBuildInfoName}'
+      buildNumber: '${triggerBuildInfoNumber}'
       flat: true
 #      pattern: app-generic/backend
 #      aql: '{"name":"backend","@build.name":"backapp_go_pipeline","@build.number":"43"}'
@@ -78,21 +78,21 @@ resources:
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-docker
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
 
   - name: build_info_docker_backapp_scanned
     type: BuildInfo
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-docker
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
 
   - name: build_info_docker_backapp_promoted
     type: BuildInfo
     configuration:
       sourceArtifactory: myArtifactory
       buildName: backapp-docker
-      buildNumber: ${run_number}
+      buildNumber: '${run_number}'
 
 # DEPLOY pipeline
   - name: app_helm_chart

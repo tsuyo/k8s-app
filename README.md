@@ -11,11 +11,11 @@
 
 ## Pipelines
 ### Integrations
-- Name: myGitHub, Integration Type: GitHub
-- Name: myArtifactory, Integration Type: Artifactory
+- Name: myGitHub, Integration Type: GitHub, Token: Create one on GitHub (Settings → Developer settings → Personal access tokens → Generate new token)
+- Name: myArtifactory, Integration Type: Artifactory, url: https://tsuyo1.jfrog.io/artifactory, User: admin, API Key: Create one on Artifactory (Edit Profile → Authentication Settings → API Key)
 
-# Pipelines Config
-## Pipeline Sources
+### Pipeline Sources
+Single Branch
 Integration: myGitHub
 Repository Full Name: tsuyo/k8s-app
 Branch: master
